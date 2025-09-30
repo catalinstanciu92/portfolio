@@ -4,11 +4,11 @@ const experience = [
     role: "Full Stack Engineer",
     period: "Mar 2021 – Present",
     summary:
-      "Leading the evolution of a digital procurement platform by pairing a GraphQL + Ruby on Rails backend with a modern React front-end.",
+      "Leading the evolution of a digital procurement platform with a Ruby on Rails architecture that powers GraphQL APIs, contract automation, and supplier analytics.",
     highlights: [
-      "Deliver new procurement flows end-to-end, from UX collaboration to production deploys.",
-      "Integrate critical services including SendGrid, Twilio, DocuSign, Stripe, and AWS S3.",
-      "Raise code quality with thorough reviews, automated testing, and performance tuning.",
+      "Model procurement domains and deliver Rails APIs consumed by React and partner integrations.",
+      "Integrate SendGrid, Twilio, DocuSign, Stripe, and AWS S3 with resilient background processing.",
+      "Raise code quality with contract tests, performance tuning, and observability guardrails.",
     ],
   },
   {
@@ -16,11 +16,11 @@ const experience = [
     role: "Full Stack Developer",
     period: "Jul 2019 – Feb 2021",
     summary:
-      "Built insurance and policy management tooling on Ruby on Rails with a focus on data-driven UX and agile delivery.",
+      "Built insurance and policy management platforms on Ruby on Rails with rigorous domain modeling and agile delivery.",
     highlights: [
-      "Architected database schemas and optimized dashboard queries with eager-loading strategies.",
+      "Designed normalized schemas and Rails services that kept reporting fast under heavy data loads.",
       "Owned deployments to Heroku and AWS while maintaining CI/CD hygiene.",
-      "Partnered with stakeholders to translate user stories into polished product increments.",
+      "Partnered with stakeholders to translate compliance-heavy stories into automated Rails workflows.",
     ],
   },
   {
@@ -28,11 +28,11 @@ const experience = [
     role: "Software Engineer",
     period: "Jul 2018 – May 2019",
     summary:
-      "Shipped full-stack features across analytics dashboards and admin tooling for enterprise clients.",
+      "Shipped analytics dashboards and admin tooling with a Rails backbone serving complex reporting needs.",
     highlights: [
-      "Implemented interactive data visualizations with C3.js and custom Select2 components.",
+      "Implemented data visualizations backed by optimized ActiveRecord queries and caching.",
       "Introduced Rails Admin workflows that improved onboarding and content governance.",
-      "Collaborated across design and product to craft accessible UI systems.",
+      "Collaborated across design and product to craft accessible Rails-backed UI systems.",
     ],
   },
 ];
@@ -41,29 +41,29 @@ const projects = [
   {
     name: "ProfiCircle Platform",
     description:
-      "End-to-end fit-out procurement platform that connects buyers with vetted suppliers, complete with digital contracting and quote comparisons.",
+      "Fit-out procurement platform powered by a Rails monolith orchestrating GraphQL APIs, contract workflows, and supplier matching.",
     url: "https://app.proficircle.com",
     stack: ["React", "GraphQL", "Ruby on Rails", "PostgreSQL", "AWS"],
   },
   {
     name: "PlanHero",
     description:
-      "Scheduling and task orchestration suite that centralizes project planning for teams through intuitive dashboards and automation hooks.",
+      "Scheduling suite where a Ruby on Rails core coordinates complex recurring events, billing, and notification pipelines.",
     url: "https://app.planhero.com/signup",
     stack: ["Ruby on Rails", "JavaScript", "Heroku", "Amazon S3"],
   },
   {
     name: "Practice Zebra",
     description:
-      "Marketing analytics portal for dental practices with real-time performance insights and content automation workflows.",
+      "Dental marketing analytics portal driven by Rails services delivering real-time dashboards and automated content workflows.",
     url: "https://practicezebra.com",
     stack: ["Ruby on Rails", "PostgreSQL", "C3.js", "Responsive UI"],
   },
 ];
 
 const skills = {
-  core: ["React", "Next.js", "TypeScript", "Ruby on Rails", "GraphQL", "PostgreSQL"],
-  tooling: ["Apollo Client", "Sidekiq", "RSpec", "AWS", "Stripe", "Twilio", "OpenAI"]
+  core: ["Ruby on Rails", "Ruby", "PostgreSQL", "GraphQL", "React", "Next.js", "TypeScript"],
+  tooling: ["Sidekiq", "RSpec", "AWS", "Stripe", "Twilio", "OpenAI", "Apollo Client"]
 };
 
 function App() {
@@ -95,26 +95,26 @@ function App() {
           <section id="hero" className="mx-auto flex max-w-6xl flex-col gap-14 px-6 pb-24 pt-24 md:flex-row md:items-center">
             <div className="flex-1 space-y-8">
               <span className="inline-flex items-center gap-2 rounded-full bg-primary_accent/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-primary_accent">
-                Full Stack Engineer
+                Backend & Rails Specialist
               </span>
               <h1 className="text-4xl font-semibold leading-tight md:text-5xl">
-                Building human-centered products with resilient full-stack architecture.
+                Architecting resilient Ruby on Rails platforms for ambitious products.
               </h1>
               <p className="max-w-xl text-lg text-text_headings/80">
-                I partner with teams to deliver delightful interfaces on top of robust GraphQL and Ruby on Rails services, keeping quality, accessibility, and scalability at the core.
+                I partner with teams to model complex domains, design performant APIs, and scale background processing so each Rails release ships faster, safer, and with measurable impact.
               </p>
               <div className="flex flex-wrap gap-4">
                 <a
                   href="#projects"
                   className="inline-flex items-center gap-2 rounded-full bg-primary_accent px-6 py-3 text-background transition hover:bg-primary_accent/80"
                 >
-                  View Projects
+                  View Rails Work
                 </a>
                 <a
                   href="mailto:catalinstanciu@live.com"
                   className="inline-flex items-center gap-2 rounded-full border border-secondary_accent px-6 py-3 text-secondary_accent transition hover:bg-secondary_accent/10"
                 >
-                  Let’s Collaborate
+                  Discuss Back-end Needs
                 </a>
               </div>
             </div>
@@ -124,19 +124,19 @@ function App() {
                 <div className="grid gap-6 md:grid-cols-2">
                   <div>
                     <p className="text-4xl font-semibold text-primary_accent">10+</p>
-                    <p className="text-sm uppercase tracking-widest text-text_headings/60">Years crafting digital products</p>
+                    <p className="text-sm uppercase tracking-widest text-text_headings/60">Years shipping production Rails systems</p>
                   </div>
                   <div>
-                    <p className="text-4xl font-semibold text-primary_accent">End-to-end</p>
-                    <p className="text-sm uppercase tracking-widest text-text_headings/60">Ownership across web stacks</p>
+                    <p className="text-4xl font-semibold text-primary_accent">Rails-first</p>
+                    <p className="text-sm uppercase tracking-widest text-text_headings/60">Domain-driven monoliths & modular engines</p>
                   </div>
                   <div>
-                    <p className="text-4xl font-semibold text-primary_accent">API-first</p>
-                    <p className="text-sm uppercase tracking-widest text-text_headings/60">Stripe, Twilio, DocuSign, OpenAI</p>
+                    <p className="text-4xl font-semibold text-primary_accent">Scalable APIs</p>
+                    <p className="text-sm uppercase tracking-widest text-text_headings/60">GraphQL, REST, background jobs, integrations</p>
                   </div>
                   <div>
-                    <p className="text-4xl font-semibold text-primary_accent">Quality Driven</p>
-                    <p className="text-sm uppercase tracking-widest text-text_headings/60">RSpec, CI/CD, performance</p>
+                    <p className="text-4xl font-semibold text-primary_accent">Reliability</p>
+                    <p className="text-sm uppercase tracking-widest text-text_headings/60">RSpec, CI/CD, observability, performance</p>
                   </div>
                 </div>
               </div>
@@ -147,10 +147,10 @@ function App() {
             <div className="mx-auto max-w-4xl px-6 text-center md:text-left">
               <h2 className="text-sm uppercase tracking-[0.3em] text-secondary_accent">About</h2>
               <p className="mt-6 text-3xl font-light leading-relaxed text-text_headings">
-                Catalin is a Bucharest-based engineer crafting scalable web apps that balance polish and pragmatism. From React and Next.js experiences to Ruby on Rails services, I help teams ship confidently, move quickly, and keep users delighted.
+                Catalin is a Bucharest-based backend engineer anchored in Ruby on Rails. I craft platforms that balance delightful product surfaces with rock-solid data modeling, caching, and delivery pipelines.
               </p>
               <p className="mt-6 text-lg text-text_headings/80">
-                I thrive when pairing closely with designers and product partners, shaping technical direction, and mentoring teams on testing, accessibility, and delivery best practices.
+                Whether evolving legacy monoliths or introducing modular engines, I shape technical direction, embed testing and observability from the start, and mentor teams on sustainable Rails practices.
               </p>
             </div>
           </section>
@@ -188,9 +188,9 @@ function App() {
           <section id="skills" className="bg-panels_cards/40 py-20">
             <div className="mx-auto flex max-w-5xl flex-col gap-10 px-6 md:flex-row">
               <div className="flex-1">
-                <h2 className="text-3xl font-semibold text-secondary_accent">Toolkit</h2>
+                <h2 className="text-3xl font-semibold text-secondary_accent">Rails Toolkit</h2>
                 <p className="mt-4 text-text_headings/80">
-                  Hands-on with modern tooling across the stack, from finely tuned interfaces to secure, scalable back-end services.
+                  Opinionated about clean Rails architecture, efficient SQL, and the background workers, queues, and observability that keep product teams confident as they scale.
                 </p>
               </div>
               <div className="flex flex-1 flex-col gap-6">
@@ -257,9 +257,9 @@ function App() {
 
           <section id="contact" className="bg-panels_cards/50 py-24">
             <div className="mx-auto max-w-4xl px-6 text-center">
-              <h2 className="text-3xl font-semibold text-secondary_accent">Let’s build something remarkable.</h2>
+              <h2 className="text-3xl font-semibold text-secondary_accent">Let’s scale your Rails platform.</h2>
               <p className="mt-6 text-lg text-text_headings/80">
-                Open to collaborations, freelance engagements, or full-time opportunities. Drop me a note and let’s explore how I can help your team.
+                Open to collaborations, freelance engagements, or full-time opportunities focused on backend architecture, migrations, and delivery pipelines.
               </p>
               <div className="mt-10 flex flex-wrap justify-center gap-4">
                 <a
