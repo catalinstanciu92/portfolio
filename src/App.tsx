@@ -62,8 +62,24 @@ const projects = [
 ];
 
 const skills = {
-  core: ["Ruby on Rails", "React", "TypeScript", "GraphQL", "PostgreSQL", "Next.js", "Ruby"],
-  tooling: ["Sidekiq", "RSpec", "AWS", "Stripe", "Twilio", "OpenAI", "Apollo Client"]
+  core: [
+    "Ruby on Rails",
+    "React",
+    "TypeScript",
+    "GraphQL",
+    "PostgreSQL",
+    "Next.js",
+    "Ruby",
+  ],
+  tooling: [
+    "Sidekiq",
+    "RSpec",
+    "AWS",
+    "Stripe",
+    "Twilio",
+    "OpenAI",
+    "Apollo Client",
+  ],
 };
 
 function App() {
@@ -75,12 +91,34 @@ function App() {
 
         <header className="sticky top-0 z-20 backdrop-blur bg-background/70 border-b border-primary_accent/20">
           <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
-            <a href="#hero" className="text-2xl font-semibold tracking-wide text-primary_accent">Catalin Stanciu</a>
+            <a
+              href="#hero"
+              className="text-2xl font-semibold tracking-wide text-primary_accent"
+            >
+              Catalin Stanciu
+            </a>
             <nav className="hidden space-x-8 text-sm uppercase tracking-[0.2em] md:flex">
-              <a href="#about" className="transition hover:text-primary_accent">About</a>
-              <a href="#experience" className="transition hover:text-primary_accent">Experience</a>
-              <a href="#projects" className="transition hover:text-primary_accent">Projects</a>
-              <a href="#contact" className="transition hover:text-primary_accent">Contact</a>
+              <a href="#about" className="transition hover:text-primary_accent">
+                About
+              </a>
+              <a
+                href="#experience"
+                className="transition hover:text-primary_accent"
+              >
+                Experience
+              </a>
+              <a
+                href="#projects"
+                className="transition hover:text-primary_accent"
+              >
+                Projects
+              </a>
+              <a
+                href="#contact"
+                className="transition hover:text-primary_accent"
+              >
+                Contact
+              </a>
             </nav>
             <a
               href="/catalin-stanciu-cv-032025.pdf"
@@ -92,16 +130,22 @@ function App() {
         </header>
 
         <main className="relative z-10">
-          <section id="hero" className="mx-auto flex max-w-6xl flex-col gap-14 px-6 pb-24 pt-24 md:flex-row md:items-center">
+          <section
+            id="hero"
+            className="mx-auto flex max-w-6xl flex-col gap-14 px-6 pb-24 pt-24 md:flex-row md:items-center"
+          >
             <div className="flex-1 space-y-8">
               <span className="inline-flex items-center gap-2 rounded-full bg-primary_accent/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-primary_accent">
                 Full Stack Engineer · Rails Leaning
               </span>
               <h1 className="text-4xl font-semibold leading-tight md:text-5xl">
-                Designing dependable back ends and polished front ends that ship together.
+                Designing dependable back ends and polished front ends that ship
+                together.
               </h1>
               <p className="max-w-xl text-lg text-text_headings/80">
-                Most days you’ll find me modeling data, tuning Rails services, and shipping APIs—then rounding out the experience with React interfaces that make those services shine.
+                Most days you’ll find me modeling data, tuning Rails services,
+                and shipping APIs—then rounding out the experience with React
+                interfaces that make those services shine.
               </p>
               <div className="flex flex-wrap gap-4">
                 <a
@@ -120,23 +164,41 @@ function App() {
             </div>
             <div className="flex-1 space-y-6">
               <div className="rounded-3xl border border-primary_accent/20 bg-panels_cards/80 p-8 shadow-lg backdrop-blur">
-                <h2 className="mb-6 text-sm uppercase tracking-[0.3em] text-secondary_accent/80">Snapshot</h2>
+                <h2 className="mb-6 text-sm uppercase tracking-[0.3em] text-secondary_accent/80">
+                  Snapshot
+                </h2>
                 <div className="grid gap-6 md:grid-cols-2">
                   <div>
-                    <p className="text-4xl font-semibold text-primary_accent">10+</p>
-                    <p className="text-sm uppercase tracking-widest text-text_headings/60">Years shipping production web apps</p>
+                    <p className="text-4xl font-semibold text-primary_accent">
+                      10+
+                    </p>
+                    <p className="text-sm uppercase tracking-widest text-text_headings/60">
+                      Years shipping production web apps
+                    </p>
                   </div>
                   <div>
-                    <p className="text-4xl font-semibold text-primary_accent">Backend-leaning</p>
-                    <p className="text-sm uppercase tracking-widest text-text_headings/60">Rails, APIs, data modeling, background jobs</p>
+                    <p className="text-4xl font-semibold text-primary_accent">
+                      Backend-leaning
+                    </p>
+                    <p className="text-sm uppercase tracking-widest text-text_headings/60">
+                      Rails, APIs, data modeling, background jobs
+                    </p>
                   </div>
                   <div>
-                    <p className="text-4xl font-semibold text-primary_accent">Full Stack</p>
-                    <p className="text-sm uppercase tracking-widest text-text_headings/60">React, Next.js, design collaboration</p>
+                    <p className="text-4xl font-semibold text-primary_accent">
+                      Full Stack
+                    </p>
+                    <p className="text-sm uppercase tracking-widest text-text_headings/60">
+                      React, Next.js, design collaboration
+                    </p>
                   </div>
                   <div>
-                    <p className="text-4xl font-semibold text-primary_accent">Quality</p>
-                    <p className="text-sm uppercase tracking-widest text-text_headings/60">RSpec, CI/CD, observability, performance</p>
+                    <p className="text-4xl font-semibold text-primary_accent">
+                      Quality
+                    </p>
+                    <p className="text-sm uppercase tracking-widest text-text_headings/60">
+                      RSpec, CI/CD, observability, performance
+                    </p>
                   </div>
                 </div>
               </div>
@@ -145,31 +207,48 @@ function App() {
 
           <section id="about" className="bg-panels_cards/60 py-20">
             <div className="mx-auto max-w-4xl px-6 text-center md:text-left">
-              <h2 className="text-sm uppercase tracking-[0.3em] text-secondary_accent">About</h2>
+              <h2 className="text-sm uppercase tracking-[0.3em] text-secondary_accent">
+                About
+              </h2>
               <p className="mt-6 text-3xl font-light leading-relaxed text-text_headings">
-                Catalin is a Bucharest-based full stack engineer with a Rails backbone. I blend thoughtful data modeling and API design with interface polish so entire product slices launch together.
+                Catalin is a Bucharest-based full stack engineer with a Rails
+                backbone. I blend thoughtful data modeling and API design with
+                interface polish so entire product slices launch together.
               </p>
               <p className="mt-6 text-lg text-text_headings/80">
-                From evolving monoliths to shaping new feature teams, I coach on sustainable Rails practices, bring React and design partners along, and keep delivery measurable end to end.
+                From evolving monoliths to shaping new feature teams, I coach on
+                sustainable Rails practices, bring React and design partners
+                along, and keep delivery measurable end to end.
               </p>
             </div>
           </section>
 
           <section id="experience" className="mx-auto max-w-6xl px-6 py-24">
             <div className="flex items-baseline justify-between">
-              <h2 className="text-3xl font-semibold text-secondary_accent">Experience</h2>
-              <span className="text-sm uppercase tracking-[0.3em] text-text_headings/60">Recent Roles</span>
+              <h2 className="text-3xl font-semibold text-secondary_accent">
+                Experience
+              </h2>
+              <span className="text-sm uppercase tracking-[0.3em] text-text_headings/60">
+                Recent Roles
+              </span>
             </div>
             <div className="mt-12 space-y-10 border-l border-primary_accent/20 pl-10">
               {experience.map((job) => (
-                <article key={job.company} className="relative rounded-2xl bg-panels_cards/60 p-8 shadow-lg">
-                  <span className="absolute -left-11 top-8 h-5 w-5 rounded-full border-2 border-primary_accent bg-background" />
+                <article
+                  key={job.company}
+                  className="relative rounded-2xl bg-panels_cards/60 p-8 shadow-lg"
+                >
+                  <span className="absolute -left-11 top-8 h-5 w-2 rounded-2xl border-2 border-primary_accent bg-background" />
                   <div className="flex flex-wrap items-baseline justify-between gap-3">
                     <div>
                       <h3 className="text-2xl font-semibold">{job.company}</h3>
-                      <p className="text-sm uppercase tracking-[0.2em] text-primary_accent">{job.role}</p>
+                      <p className="text-sm uppercase tracking-[0.2em] text-primary_accent">
+                        {job.role}
+                      </p>
                     </div>
-                    <span className="text-xs uppercase tracking-[0.3em] text-text_headings/60">{job.period}</span>
+                    <span className="text-xs uppercase tracking-[0.3em] text-text_headings/60">
+                      {job.period}
+                    </span>
                   </div>
                   <p className="mt-6 text-text_headings/80">{job.summary}</p>
                   <ul className="mt-6 space-y-3 text-sm text-text_headings/70">
@@ -188,27 +267,41 @@ function App() {
           <section id="skills" className="bg-panels_cards/40 py-20">
             <div className="mx-auto flex max-w-5xl flex-col gap-10 px-6 md:flex-row">
               <div className="flex-1">
-                <h2 className="text-3xl font-semibold text-secondary_accent">Toolkit</h2>
+                <h2 className="text-3xl font-semibold text-secondary_accent">
+                  Toolkit
+                </h2>
                 <p className="mt-4 text-text_headings/80">
-                  Opinionated about clean Rails architecture, efficient SQL, and the React patterns, design systems, and background queues that keep product teams shipping with confidence.
+                  Opinionated about clean Rails architecture, efficient SQL, and
+                  the React patterns, design systems, and background queues that
+                  keep product teams shipping with confidence.
                 </p>
               </div>
               <div className="flex flex-1 flex-col gap-6">
                 <div>
-                  <h3 className="text-sm uppercase tracking-[0.3em] text-primary_accent">Core Stack</h3>
+                  <h3 className="text-sm uppercase tracking-[0.3em] text-primary_accent">
+                    Core Stack
+                  </h3>
                   <div className="mt-3 flex flex-wrap gap-3">
                     {skills.core.map((item) => (
-                      <span key={item} className="rounded-full border border-primary_accent/30 bg-primary_accent/10 px-4 py-2 text-sm text-primary_accent">
+                      <span
+                        key={item}
+                        className="rounded-full border border-primary_accent/30 bg-primary_accent/10 px-4 py-2 text-sm text-primary_accent"
+                      >
                         {item}
                       </span>
                     ))}
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-sm uppercase tracking-[0.3em] text-secondary_accent">Integrations & Ops</h3>
+                  <h3 className="text-sm uppercase tracking-[0.3em] text-secondary_accent">
+                    Integrations & Ops
+                  </h3>
                   <div className="mt-3 flex flex-wrap gap-3">
                     {skills.tooling.map((item) => (
-                      <span key={item} className="rounded-full border border-secondary_accent/30 bg-secondary_accent/10 px-4 py-2 text-sm text-secondary_accent">
+                      <span
+                        key={item}
+                        className="rounded-full border border-secondary_accent/30 bg-secondary_accent/10 px-4 py-2 text-sm text-secondary_accent"
+                      >
                         {item}
                       </span>
                     ))}
@@ -220,8 +313,12 @@ function App() {
 
           <section id="projects" className="mx-auto max-w-6xl px-6 py-24">
             <div className="flex items-baseline justify-between">
-              <h2 className="text-3xl font-semibold text-secondary_accent">Recent Projects</h2>
-              <span className="text-sm uppercase tracking-[0.3em] text-text_headings/60">Select Work</span>
+              <h2 className="text-3xl font-semibold text-secondary_accent">
+                Recent Projects
+              </h2>
+              <span className="text-sm uppercase tracking-[0.3em] text-text_headings/60">
+                Select Work
+              </span>
             </div>
             <div className="mt-12 grid gap-8 md:grid-cols-2">
               {projects.map((project) => (
@@ -231,11 +328,18 @@ function App() {
                 >
                   <div className="absolute -right-12 top-12 h-32 w-32 rounded-full bg-primary_accent/10 blur-2xl transition group-hover:bg-primary_accent/20" />
                   <div className="relative z-10">
-                    <h3 className="text-2xl font-semibold text-text_headings">{project.name}</h3>
-                    <p className="mt-4 text-text_headings/80">{project.description}</p>
+                    <h3 className="text-2xl font-semibold text-text_headings">
+                      {project.name}
+                    </h3>
+                    <p className="mt-4 text-text_headings/80">
+                      {project.description}
+                    </p>
                     <div className="mt-6 flex flex-wrap gap-3">
                       {project.stack.map((stackItem) => (
-                        <span key={stackItem} className="rounded-full bg-background/60 px-3 py-1 text-xs uppercase tracking-[0.25em] text-primary_accent">
+                        <span
+                          key={stackItem}
+                          className="rounded-full bg-background/60 px-3 py-1 text-xs uppercase tracking-[0.25em] text-primary_accent"
+                        >
                           {stackItem}
                         </span>
                       ))}
@@ -257,9 +361,13 @@ function App() {
 
           <section id="contact" className="bg-panels_cards/50 py-24">
             <div className="mx-auto max-w-4xl px-6 text-center">
-              <h2 className="text-3xl font-semibold text-secondary_accent">Let’s ship the next release together.</h2>
+              <h2 className="text-3xl font-semibold text-secondary_accent">
+                Let’s ship the next release together.
+              </h2>
               <p className="mt-6 text-lg text-text_headings/80">
-                Available for collaborations, freelance engagements, or full-time roles where a Rails-leaning full stack partner can accelerate delivery end to end.
+                Available for collaborations, freelance engagements, or
+                full-time roles where a Rails-leaning full stack partner can
+                accelerate delivery end to end.
               </p>
               <div className="mt-10 flex flex-wrap justify-center gap-4">
                 <a
