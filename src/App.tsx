@@ -35,6 +35,18 @@ const experience = [
       "Collaborated across design and product to craft accessible Rails-backed UI systems.",
     ],
   },
+  {
+    company: "Survey Platforms (YouGov & Ipsos)",
+    role: "Survey Engineering Lead",
+    period: "Oct 2014 – May 2018",
+    summary:
+      "Engineered research survey platforms for brands like YouGov and Ipsos, blending bespoke scripting with data quality automation across high-volume studies.",
+    highlights: [
+      "Scripted complex questionnaire logic in Python, JavaScript, and proprietary tooling within YouGov’s Gryphon platform.",
+      "Delivered multinational campaigns at Ipsos by extending SPSS Dimensions with custom HTML/CSS and VBA-driven reporting automations.",
+      "Mentored survey teams, streamlined delivery workflows, and introduced reusable templates that accelerated turnaround for new studies.",
+    ],
+  },
 ];
 
 const projects = [
@@ -82,6 +94,160 @@ const skills = {
   ],
 };
 
+const sectionNav = [
+  {
+    id: "hero",
+    label: "Intro",
+    icon: (
+      <svg
+        className="h-5 w-5"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.5"
+      >
+        <path
+          d="M3 11L12 3l9 8"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M5 9v12h5v-6h4v6h5V9"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    ),
+  },
+  {
+    id: "about",
+    label: "About",
+    icon: (
+      <svg
+        className="h-5 w-5"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.5"
+      >
+        <circle
+          cx="12"
+          cy="8"
+          r="3.25"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M5.5 20a6.5 6.5 0 0 1 13 0"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    ),
+  },
+  {
+    id: "experience",
+    label: "Experience",
+    icon: (
+      <svg
+        className="h-5 w-5"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.5"
+      >
+        <path
+          d="M4 7h16v11H4z"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M9 7V5h6v2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M4 12h16"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    ),
+  },
+  {
+    id: "skills",
+    label: "Skills",
+    icon: (
+      <svg
+        className="h-5 w-5"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.5"
+      >
+        <path
+          d="M12 3l2.3 4.66 5.15.75-3.72 3.6.88 5.14L12 15.9l-4.61 2.42.88-5.14-3.72-3.6 5.15-.75z"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    ),
+  },
+  {
+    id: "projects",
+    label: "Projects",
+    icon: (
+      <svg
+        className="h-5 w-5"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.5"
+      >
+        <path
+          d="M4 5h16v14H4z"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M4 9h16"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M9 13h6"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    ),
+  },
+  {
+    id: "contact",
+    label: "Contact",
+    icon: (
+      <svg
+        className="h-5 w-5"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.5"
+      >
+        <path
+          d="M4 5h16v14H4z"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M4 7l8 6 8-6"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    ),
+  },
+];
+
 function App() {
   return (
     <div className="min-h-screen bg-background text-text_headings">
@@ -128,6 +294,24 @@ function App() {
             </a>
           </div>
         </header>
+
+        <aside
+          className="fixed right-6 top-1/2 z-30 hidden -translate-y-1/2 flex-col gap-3 lg:flex"
+          aria-label="Section navigation"
+        >
+          {sectionNav.map((section) => (
+            <a
+              key={section.id}
+              href={`#${section.id}`}
+              className="group relative flex h-12 w-12 items-center justify-center rounded-full border border-primary_accent/30 bg-panels_cards/70 text-primary_accent transition hover:border-primary_accent/70 hover:bg-primary_accent/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary_accent/70"
+            >
+              {section.icon}
+              <span className="pointer-events-none absolute right-full mr-3 rounded-full bg-panels_cards/90 px-3 py-1 text-xs uppercase tracking-[0.2em] text-text_headings opacity-0 transition group-hover:opacity-100 group-focus-visible:opacity-100">
+                {section.label}
+              </span>
+            </a>
+          ))}
+        </aside>
 
         <main className="relative z-10">
           <section
