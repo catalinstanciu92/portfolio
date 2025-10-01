@@ -384,6 +384,14 @@ function App() {
                 >
                   GitHub Profile
                 </a>
+                <a
+                  href="https://www.linkedin.com/in/catalin-stanciu92/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full border border-primary_accent px-8 py-3 text-primary_accent transition hover:bg-primary_accent/10"
+                >
+                  LinkedIn Profile
+                </a>
               </div>
             </div>
           </section>
