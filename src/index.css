@@ -44,15 +44,40 @@ body {
   z-index: 0;
   background: 
     /* Large circle top right */
-    radial-gradient(circle at 85% 15%, rgba(255, 24, 1, 0.08) 0%, transparent 35%),
-    /* Rectangle top left */
-    linear-gradient(135deg, transparent 40%, rgba(255, 24, 1, 0.06) 40%, rgba(255, 24, 1, 0.06) 45%, transparent 45%),
-    /* Small circle middle left */
-    radial-gradient(circle at 10% 50%, rgba(255, 24, 1, 0.05) 0%, transparent 20%),
-    /* Arc bottom right */
-    radial-gradient(ellipse at 95% 85%, rgba(255, 24, 1, 0.06) 0%, transparent 30%),
-    /* Thin line decoration */
-    linear-gradient(90deg, transparent 90%, rgba(255, 24, 1, 0.1) 90%, rgba(255, 24, 1, 0.1) 91%, transparent 91%);
+    radial-gradient(circle at 85% 10%, rgba(255, 24, 1, 0.1) 0%, transparent 40%),
+    /* Medium circle middle right */
+    radial-gradient(circle at 92% 45%, rgba(255, 24, 1, 0.06) 0%, transparent 25%),
+    /* Small circle lower left */
+    radial-gradient(circle at 5% 75%, rgba(255, 24, 1, 0.08) 0%, transparent 30%),
+    /* Tiny circle near header */
+    radial-gradient(circle at 15% 8%, rgba(255, 24, 1, 0.12) 0%, transparent 15%),
+    /* Triangle shape top left (using linear gradients) */
+    linear-gradient(225deg, transparent 48%, rgba(255, 24, 1, 0.04) 48%, rgba(255, 24, 1, 0.04) 52%, transparent 52%),
+    /* Diagonal stripe 1 */
+    linear-gradient(45deg, transparent 45%, rgba(255, 24, 1, 0.03) 45%, rgba(255, 24, 1, 0.03) 46%, transparent 46%),
+    /* Diagonal stripe 2 */
+    linear-gradient(45deg, transparent 48%, rgba(255, 24, 1, 0.03) 48%, rgba(255, 24, 1, 0.03) 49%, transparent 49%),
+    /* Horizontal accent line top */
+    linear-gradient(180deg, transparent 8%, rgba(255, 24, 1, 0.08) 8%, rgba(255, 24, 1, 0.08) 8.5%, transparent 8.5%),
+    /* Horizontal accent line middle */
+    linear-gradient(180deg, transparent 35%, rgba(255, 24, 1, 0.05) 35%, rgba(255, 24, 1, 0.05) 35.3%, transparent 35.3%),
+    /* Vertical accent line right */
+    linear-gradient(90deg, transparent 95%, rgba(255, 24, 1, 0.06) 95%, rgba(255, 24, 1, 0.06) 95.5%, transparent 95.5%),
+    /* Vertical accent line left */
+    linear-gradient(90deg, transparent 2%, rgba(255, 24, 1, 0.05) 2%, rgba(255, 24, 1, 0.05) 2.3%, transparent 2.3%),
+    /* Ellipse bottom center */
+    radial-gradient(ellipse 60% 30% at 50% 95%, rgba(255, 24, 1, 0.04) 0%, transparent 70%),
+    /* Corner arc bottom right */
+    radial-gradient(circle at 100% 100%, rgba(255, 24, 1, 0.08) 0%, transparent 35%),
+    /* Corner arc top left */
+    radial-gradient(circle at 0% 0%, rgba(255, 24, 1, 0.06) 0%, transparent 25%),
+    /* Grid dots pattern */
+    radial-gradient(circle at 25% 25%, rgba(255, 24, 1, 0.03) 1px, transparent 1px),
+    radial-gradient(circle at 75% 65%, rgba(255, 24, 1, 0.03) 1px, transparent 1px),
+    radial-gradient(circle at 40% 80%, rgba(255, 24, 1, 0.03) 1px, transparent 1px),
+    /* Cross/plus shape mid right */
+    linear-gradient(180deg, transparent 48%, rgba(255, 24, 1, 0.04) 48%, rgba(255, 24, 1, 0.04) 52%, transparent 52%),
+    linear-gradient(90deg, transparent 69%, rgba(255, 24, 1, 0.04) 69%, rgba(255, 24, 1, 0.04) 71%, transparent 71%);
 }
 
 /* ===== TYPOGRAPHY ===== */
