@@ -389,7 +389,7 @@ function App() {
             className="mx-auto flex max-w-6xl flex-col gap-14 px-6 pb-24 pt-20 md:flex-row md:items-center min-h-[90vh]"
           >
             <div className="flex-1 space-y-8 animate-fade-in-up">
-              <span className="inline-flex items-center gap-2 rounded-full bg-primary_accent/10 px-4 py-2 text-sm font-medium text-primary_accent">
+              <span className="inline-flex items-center gap-2 text-sm font-medium text-primary_accent">
                 <span className="h-2 w-2 rounded-full bg-tertiary_accent animate-pulse" />
                 Full Stack Engineer · Rails Leaning
               </span>
@@ -429,7 +429,7 @@ function App() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                     </svg>
                   </div>
-                  <h2 className="text-sm font-semibold uppercase tracking-wider text-text_body">
+                  <h2 className="text-sm font-semibold tracking-wider text-text_body">
                     At a Glance
                   </h2>
                 </div>
@@ -476,7 +476,7 @@ function App() {
             <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-muted to-transparent" />
             <div className="mx-auto max-w-4xl px-6">
               <AnimatedSection>
-                <span className="text-sm font-semibold uppercase tracking-wider text-primary_accent">
+                <span className="text-sm font-semibold tracking-wider text-primary_accent">
                   About Me
                 </span>
                 <p className="mt-6 text-2xl md:text-3xl font-light leading-relaxed text-text_headings">
@@ -529,7 +529,7 @@ function App() {
                               {job.role}
                             </p>
                           </div>
-                          <span className="text-xs font-medium px-3 py-1 rounded-full bg-muted text-text_body">
+                          <span className="text-xs font-medium text-text_body">
                             {job.period}
                           </span>
                         </div>
@@ -568,38 +568,24 @@ function App() {
                 <div className="flex flex-1 flex-col gap-8">
                   <AnimatedSection delay={100}>
                     <div>
-                      <h3 className="text-sm font-semibold uppercase tracking-wider text-primary_accent flex items-center gap-2">
+                      <h3 className="text-sm font-semibold tracking-wider text-primary_accent flex items-center gap-2">
                         <span className="h-1.5 w-1.5 rounded-full bg-primary_accent" />
                         Core Stack
                       </h3>
-                      <div className="mt-4 flex flex-wrap gap-2">
-                        {skills.core.map((item) => (
-                          <span
-                            key={item}
-                            className="skill-tag rounded-full bg-primary_accent/10 px-4 py-2 text-sm font-medium text-primary_accent hover:bg-primary_accent hover:text-white cursor-default"
-                          >
-                            {item}
-                          </span>
-                        ))}
-                      </div>
+                      <p className="mt-4 text-text_body leading-relaxed">
+                        {skills.core.join(" · ")}
+                      </p>
                     </div>
                   </AnimatedSection>
                   <AnimatedSection delay={200}>
                     <div>
-                      <h3 className="text-sm font-semibold uppercase tracking-wider text-tertiary_accent flex items-center gap-2">
+                      <h3 className="text-sm font-semibold tracking-wider text-tertiary_accent flex items-center gap-2">
                         <span className="h-1.5 w-1.5 rounded-full bg-tertiary_accent" />
                         Integrations & Ops
                       </h3>
-                      <div className="mt-4 flex flex-wrap gap-2">
-                        {skills.tooling.map((item) => (
-                          <span
-                            key={item}
-                            className="skill-tag rounded-full bg-tertiary_accent/10 px-4 py-2 text-sm font-medium text-tertiary_accent hover:bg-tertiary_accent hover:text-white cursor-default"
-                          >
-                            {item}
-                          </span>
-                        ))}
-                      </div>
+                      <p className="mt-4 text-text_body leading-relaxed">
+                        {skills.tooling.join(" · ")}
+                      </p>
                     </div>
                   </AnimatedSection>
                 </div>
@@ -647,16 +633,9 @@ function App() {
                     <p className="text-text_body text-sm leading-relaxed mb-4 flex-grow">
                       {project.description}
                     </p>
-                    <div className="flex flex-wrap gap-2 mt-auto">
-                      {project.stack.map((stackItem) => (
-                        <span
-                          key={stackItem}
-                          className="rounded-full bg-muted px-3 py-1 text-xs font-medium text-text_body"
-                        >
-                          {stackItem}
-                        </span>
-                      ))}
-                    </div>
+                    <p className="mt-4 text-text_body text-sm">
+                      {project.stack.join(" · ")}
+                    </p>
                   </article>
                 </AnimatedSection>
               ))}

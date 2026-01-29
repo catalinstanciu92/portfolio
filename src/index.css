@@ -9,9 +9,9 @@ html {
   --color-panels_cards: #FFFFFF;
   --color-text_headings: #1A1A1A;
   --color-text_body: #4A4A4A;
-  --color-primary_accent: #8B4513;
-  --color-secondary_accent: #D4A853;
-  --color-tertiary_accent: #5D7A5D;
+  --color-primary_accent: #0066FF;
+  --color-secondary_accent: #FF006E;
+  --color-tertiary_accent: #8338EC;
   --color-muted: #E8E4DF;
 }
 
@@ -179,7 +179,7 @@ html {
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(139, 69, 19, 0.3);
+  box-shadow: 0 8px 25px rgba(0, 102, 255, 0.3);
 }
 
 /* Link underline animation */
