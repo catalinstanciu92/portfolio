@@ -87,7 +87,7 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background text-text-primary">
+    <div className="min-h-screen bg-background text-text-primary bg-shapes">
       {/* Header */}
       <header 
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${

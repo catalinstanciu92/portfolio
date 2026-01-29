@@ -15,14 +15,44 @@ html {
   --color-accent-light: #2c5282;
   --color-border: #e5e5e5;
   --color-border-dark: #1a1a1a;
+  /* F1 Red */
+  --color-f1-red: #FF1801;
 }
 
 /* ===== BASE STYLES ===== */
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===== BACKGROUND SHAPES ===== */
+
+.bg-shapes {
+  position: relative;
+}
+
+.bg-shapes::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 0;
+  background: 
+    /* Large circle top right */
+    radial-gradient(circle at 85% 15%, rgba(255, 24, 1, 0.08) 0%, transparent 35%),
+    /* Rectangle top left */
+    linear-gradient(135deg, transparent 40%, rgba(255, 24, 1, 0.06) 40%, rgba(255, 24, 1, 0.06) 45%, transparent 45%),
+    /* Small circle middle left */
+    radial-gradient(circle at 10% 50%, rgba(255, 24, 1, 0.05) 0%, transparent 20%),
+    /* Arc bottom right */
+    radial-gradient(ellipse at 95% 85%, rgba(255, 24, 1, 0.06) 0%, transparent 30%),
+    /* Thin line decoration */
+    linear-gradient(90deg, transparent 90%, rgba(255, 24, 1, 0.1) 90%, rgba(255, 24, 1, 0.1) 91%, transparent 91%);
 }
 
 /* ===== TYPOGRAPHY ===== */
@@ -30,20 +60,20 @@ body {
 .text-name {
   font-size: 3rem;
   font-weight: 700;
-  letter-spacing: -0.02em;
-  line-height: 1.1;
+  letter-spacing: -0.03em;
+  line-height: 1;
   color: var(--color-text-primary);
 }
 
 @media (min-width: 768px) {
   .text-name {
-    font-size: 4rem;
+    font-size: 4.5rem;
   }
 }
 
 @media (min-width: 1024px) {
   .text-name {
-    font-size: 5rem;
+    font-size: 5.5rem;
   }
 }
 
@@ -88,7 +118,7 @@ body {
 }
 
 .link-subtle:hover {
-  color: var(--color-accent);
+  color: var(--color-f1-red);
 }
 
 .link-accent {
@@ -99,7 +129,8 @@ body {
 }
 
 .link-accent:hover {
-  border-bottom-color: var(--color-accent);
+  border-bottom-color: var(--color-f1-red);
+  color: var(--color-f1-red);
 }
 
 /* ===== NAVIGATION ===== */
@@ -152,7 +183,8 @@ body {
 }
 
 .btn-outline:hover {
-  border-color: var(--color-text-primary);
+  border-color: var(--color-f1-red);
+  color: var(--color-f1-red);
 }
 
 /* ===== EXPERIENCE CARDS ===== */
@@ -189,7 +221,8 @@ body {
 
 .experience-role {
   font-size: 0.875rem;
-  color: var(--color-accent);
+  color: var(--color-f1-red);
+  font-weight: 500;
 }
 
 .experience-period {
@@ -223,7 +256,7 @@ body {
   content: "—";
   position: absolute;
   left: 0;
-  color: var(--color-text-muted);
+  color: var(--color-f1-red);
 }
 
 /* ===== PROJECT CARDS ===== */
@@ -248,11 +281,12 @@ body {
   color: inherit;
   text-decoration: none;
   border-bottom: 1px solid transparent;
-  transition: border-color 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .project-name a:hover {
-  border-bottom-color: var(--color-text-primary);
+  border-bottom-color: var(--color-f1-red);
+  color: var(--color-f1-red);
 }
 
 .project-description {
@@ -295,11 +329,12 @@ body {
   text-decoration: none;
   border-bottom: 1px solid var(--color-border);
   padding-bottom: 0.125rem;
-  transition: border-color 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .contact-link:hover {
-  border-bottom-color: var(--color-text-primary);
+  border-bottom-color: var(--color-f1-red);
+  color: var(--color-f1-red);
 }
 
 .social-link {
@@ -313,20 +348,20 @@ body {
 }
 
 .social-link:hover {
-  color: var(--color-accent);
+  color: var(--color-f1-red);
 }
 
 /* ===== SELECTION ===== */
 
 ::selection {
-  background-color: var(--color-text-primary);
+  background-color: var(--color-f1-red);
   color: #ffffff;
 }
 
 /* ===== FOCUS STYLES ===== */
 
 *:focus-visible {
-  outline: 2px solid var(--color-accent);
+  outline: 2px solid var(--color-f1-red);
   outline-offset: 2px;
 }
 
