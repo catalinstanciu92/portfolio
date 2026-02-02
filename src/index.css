@@ -5,9 +5,406 @@ html {
 }
 
 @theme {
-  --color-background: #010A13;
-  --color-panels_cards: #1E282D;
-  --color-text_headings: #F0F0F0;
-  --color-primary_accent: #0BC4B6;
-  --color-secondary_accent: #C89B3C;
+  /* Minimal Light Theme Colors */
+  --color-background: #ffffff;
+  --color-background-subtle: #fafafa;
+  --color-text-primary: #1a1a1a;
+  --color-text-secondary: #4a4a4a;
+  --color-text-muted: #6b6b6b;
+  --color-accent: #1e3a5f;
+  --color-accent-light: #2c5282;
+  --color-border: #e5e5e5;
+  --color-border-dark: #1a1a1a;
+  /* F1 Red */
+  --color-f1-red: #FF1801;
+}
+
+/* ===== BASE STYLES ===== */
+
+body {
+  font-family: "Monument Extended", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===== BACKGROUND SHAPES ===== */
+
+.bg-shapes {
+  position: relative;
+}
+
+.bg-shapes::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 0;
+  background: 
+    /* Large circle top right */
+    radial-gradient(circle at 85% 10%, rgba(255, 24, 1, 0.1) 0%, transparent 40%),
+    /* Medium circle middle right */
+    radial-gradient(circle at 92% 45%, rgba(255, 24, 1, 0.06) 0%, transparent 25%),
+    /* Small circle lower left */
+    radial-gradient(circle at 5% 75%, rgba(255, 24, 1, 0.08) 0%, transparent 30%),
+    /* Tiny circle near header */
+    radial-gradient(circle at 15% 8%, rgba(255, 24, 1, 0.12) 0%, transparent 15%),
+    /* Triangle shape top left (using linear gradients) */
+    linear-gradient(225deg, transparent 48%, rgba(255, 24, 1, 0.04) 48%, rgba(255, 24, 1, 0.04) 52%, transparent 52%),
+    /* Diagonal stripe 1 */
+    linear-gradient(45deg, transparent 45%, rgba(255, 24, 1, 0.03) 45%, rgba(255, 24, 1, 0.03) 46%, transparent 46%),
+    /* Diagonal stripe 2 */
+    linear-gradient(45deg, transparent 48%, rgba(255, 24, 1, 0.03) 48%, rgba(255, 24, 1, 0.03) 49%, transparent 49%),
+    /* Horizontal accent line top */
+    linear-gradient(180deg, transparent 8%, rgba(255, 24, 1, 0.08) 8%, rgba(255, 24, 1, 0.08) 8.5%, transparent 8.5%),
+    /* Horizontal accent line middle */
+    linear-gradient(180deg, transparent 35%, rgba(255, 24, 1, 0.05) 35%, rgba(255, 24, 1, 0.05) 35.3%, transparent 35.3%),
+    /* Vertical accent line right */
+    linear-gradient(90deg, transparent 95%, rgba(255, 24, 1, 0.06) 95%, rgba(255, 24, 1, 0.06) 95.5%, transparent 95.5%),
+    /* Vertical accent line left */
+    linear-gradient(90deg, transparent 2%, rgba(255, 24, 1, 0.05) 2%, rgba(255, 24, 1, 0.05) 2.3%, transparent 2.3%),
+    /* Ellipse bottom center */
+    radial-gradient(ellipse 60% 30% at 50% 95%, rgba(255, 24, 1, 0.04) 0%, transparent 70%),
+    /* Corner arc bottom right */
+    radial-gradient(circle at 100% 100%, rgba(255, 24, 1, 0.08) 0%, transparent 35%),
+    /* Corner arc top left */
+    radial-gradient(circle at 0% 0%, rgba(255, 24, 1, 0.06) 0%, transparent 25%),
+    /* Grid dots pattern */
+    radial-gradient(circle at 25% 25%, rgba(255, 24, 1, 0.03) 1px, transparent 1px),
+    radial-gradient(circle at 75% 65%, rgba(255, 24, 1, 0.03) 1px, transparent 1px),
+    radial-gradient(circle at 40% 80%, rgba(255, 24, 1, 0.03) 1px, transparent 1px),
+    /* Cross/plus shape mid right */
+    linear-gradient(180deg, transparent 48%, rgba(255, 24, 1, 0.04) 48%, rgba(255, 24, 1, 0.04) 52%, transparent 52%),
+    linear-gradient(90deg, transparent 69%, rgba(255, 24, 1, 0.04) 69%, rgba(255, 24, 1, 0.04) 71%, transparent 71%);
+}
+
+/* ===== TYPOGRAPHY ===== */
+
+.text-name {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  color: var(--color-text-primary);
+}
+
+@media (min-width: 768px) {
+  .text-name {
+    font-size: 4.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .text-name {
+    font-size: 5.5rem;
+  }
+}
+
+.section-label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.section-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-text-primary);
+}
+
+/* ===== LAYOUT ===== */
+
+.section-divider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-border);
+  margin: 4rem 0;
+}
+
+.section-divider-dark {
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-text-primary);
+  margin: 4rem 0;
+}
+
+/* ===== LINKS ===== */
+
+.link-subtle {
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.link-subtle:hover {
+  color: var(--color-f1-red);
+}
+
+.link-accent {
+  color: var(--color-accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.link-accent:hover {
+  border-bottom-color: var(--color-f1-red);
+  color: var(--color-f1-red);
+}
+
+/* ===== NAVIGATION ===== */
+
+.nav-link {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: var(--color-text-primary);
+}
+
+/* ===== BUTTONS ===== */
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #ffffff;
+  background-color: var(--color-text-primary);
+  border: 1px solid var(--color-text-primary);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: transparent;
+  color: var(--color-text-primary);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--color-text-primary);
+  background-color: transparent;
+  border: 1px solid var(--color-border);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn-outline:hover {
+  border-color: var(--color-f1-red);
+  color: var(--color-f1-red);
+}
+
+/* ===== EXPERIENCE CARDS ===== */
+
+.experience-item {
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.experience-item:last-child {
+  border-bottom: none;
+}
+
+.experience-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .experience-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+}
+
+.experience-company {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.experience-role {
+  font-size: 0.875rem;
+  color: var(--color-f1-red);
+  font-weight: 500;
+}
+
+.experience-period {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+
+.experience-summary {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+  margin-bottom: 1rem;
+}
+
+.experience-highlights {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.experience-highlights li {
+  position: relative;
+  padding-left: 1.25rem;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.experience-highlights li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--color-f1-red);
+}
+
+/* ===== PROJECT CARDS ===== */
+
+.project-card {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.project-card:last-child {
+  border-bottom: none;
+}
+
+.project-name {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.project-name a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.project-name a:hover {
+  border-bottom-color: var(--color-f1-red);
+  color: var(--color-f1-red);
+}
+
+.project-description {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+  margin-bottom: 0.75rem;
+}
+
+.project-stack {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+}
+
+/* ===== SKILLS ===== */
+
+.skills-list {
+  font-size: 0.9375rem;
+  line-height: 1.8;
+  color: var(--color-text-secondary);
+}
+
+.skills-category {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: 0.5rem;
+}
+
+/* ===== CONTACT ===== */
+
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9375rem;
+  color: var(--color-text-primary);
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 0.125rem;
+  transition: all 0.2s ease;
+}
+
+.contact-link:hover {
+  border-bottom-color: var(--color-f1-red);
+  color: var(--color-f1-red);
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.social-link:hover {
+  color: var(--color-f1-red);
+}
+
+/* ===== SELECTION ===== */
+
+::selection {
+  background-color: var(--color-f1-red);
+  color: #ffffff;
+}
+
+/* ===== FOCUS STYLES ===== */
+
+*:focus-visible {
+  outline: 2px solid var(--color-f1-red);
+  outline-offset: 2px;
+}
+
+/* ===== SCROLLBAR ===== */
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-muted);
 }
